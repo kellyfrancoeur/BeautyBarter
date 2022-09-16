@@ -2,8 +2,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 
-export const PendingBarters = ({ barterObject }) => {
-    const [potentialBarters, setPotentialBarters] = useState([])
+export const PendingBarters = ({ barterObject, potentialBarters, setPotentialBarters }) => {
     const [barters, setBarters] = useState([])
     const [filteredBarters, setFiltered] = useState([])
 
@@ -22,10 +21,10 @@ export const PendingBarters = ({ barterObject }) => {
     )
 
     const userBarters = () => {
-        fetch(`http://localhost:8088/barters`)
+        fetch(`http://localhost:8088/potentialBarters?_expand=user`)
             .then(response => response.json())
-            .then((barterArray) => {
-                setBarters(barterArray)
+            .then((potentialBarterArray) => {
+                setPotentialBarters(potentialBarterArray)
             })
     }
 
@@ -40,7 +39,7 @@ export const PendingBarters = ({ barterObject }) => {
         []
     )
 
-    const myPotentialBarters = () => {
+    const userExpressedInterest = () => {
         if (localBarterUser) {
             const myBarters = barters.filter(barter => barter.userId === barterUserObject.id)
             setFiltered(myBarters)
@@ -50,7 +49,7 @@ export const PendingBarters = ({ barterObject }) => {
 
     useEffect(
         () => {
-            myPotentialBarters()
+            userExpressedInterest()
         },
         [barters]
     )
@@ -64,22 +63,54 @@ export const PendingBarters = ({ barterObject }) => {
         <div>Service Offered: {barterObject.serviceOffered}</div>
         <div>Details: {barterObject.description2}</div>
         <footer>
-                {potentialBarters.map((potentialBarter) => {
-                    if (potentialBarter.barterId === barterObject.id) {
-                        return `${potentialBarter.user.firstName} is interested in your trade.`}
-                        < button onClick={() => {
-                            fetch(`http://localhost:8088/potentialBarters/${potentialBarter.id}`, {
-                                method: "DELETE"
-                            })
-                                .then(response => response.json())
-                                .then(() => {
-                                    userBarters(potentialBarters)
-                                }
-                                )
-                        }} className="barter_delete"> Delete </button>
-                    }
-               ) }
-              
-    </footer>
+            {potentialBarters.map((potentialBarter) => {
+                if (potentialBarter.barterId === barterObject.id) {
+                    return (<>
+                        Pending Barter: {potentialBarter.user.firstName} is interested in your trade.
+                        <div>
+                            < button onClick={() => {
+                                fetch(`http://localhost:8088/potentialBarters/${potentialBarter.id}`, {
+                                    method: "DELETE"
+                                })
+                                    .then(response => response.json())
+                                    .then(() => {
+                                        userBarters(potentialBarters)
+                                    }
+                                    )
+                            }} className="barter_deny"> Deny </button>
+                            <button onClick={() => {
+                                fetch(`http://localhost:8088/potentialBarters/${potentialBarter.id}`, {
+                                    method: "PUT",
+                                    headers: {
+                                        "Content-Type": "application/json"
+                                    },
+                                    body: JSON.stringify({
+                                        userId: barterUserObject.id,
+                                        barterId: potentialBarter.barterId,
+                                        accepted: true,
+                                        dateAccepted: new Date()
+                                    })
+                                })
+                                    .then(response => response.json())
+                                    .then(() => {
+                                    
+                                        fetch(`http://localhost:8088/potentialBarters/${potentialBarter.id}`)
+                                            .then(response => response.json())
+                                            .then(() => {
+                                                userBarters(potentialBarters)
+                                            }
+                                            )
+                                    })}
+                            }
+
+                             className= "barter_accept" >Accept</button>
+                        </div></>
+                    )
+                }
+            }
+            )}
+
+        </footer>
     </section >
 }
+

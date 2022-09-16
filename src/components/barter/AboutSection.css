@@ -1,0 +1,54 @@
+.h2, h2{
+    font-size: 5rem;
+    text-align: center;
+}
+.h3, h3{
+    font-size: 3.5rem;
+    text-align: center;
+}
+.form-control {
+    text-align: center;
+    display: block;
+    width: 94%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.container--about { 
+    background: url(https://media.istockphoto.com/photos/hairdressing-tools-on-wooden-planks-background-with-copyspace-in-picture-id532334732?k=6&m=532334732&s=612x612&w=0&h=m8J2EexytHVtWEwGNlu8SWJM9gZ8k7ih2RsB1lbp15U=) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+}
+.container--about {
+    text-align: center;
+    font-weight: bold;
+}
+
+.form--about {
+    background-position-x: right;
+    z-index: 1;
+    min-height: 25rem;
+    min-width: 45rem;
+    background-color: hsla(0,0%,100%,0.40);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}
+fieldset {
+    min-width: 0;
+    padding: 1rem 0;
+    margin: 0;
+    border: 0;
+}

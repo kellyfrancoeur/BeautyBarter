@@ -16,7 +16,8 @@ export const Login = () => {
                 if (foundUsers.length === 1) {
                     const user = foundUsers[0]
                     localStorage.setItem("barter_user", JSON.stringify({
-                        id: user.id
+                        id: user.id,
+                        firstName: user.firstName
                     }))
 
                     navigate("/")
