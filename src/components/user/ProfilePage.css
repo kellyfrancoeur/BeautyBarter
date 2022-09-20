@@ -1,0 +1,18 @@
+#userDetails{
+    inline-size: 450px;
+    overflow-wrap: break-word;
+    line-height: 3rem;
+    font-size: large;
+    margin-top: 0rem;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 2rem;
+}
+#user_header{
+    inline-size: 450px;
+    overflow-wrap: break-word;
+    line-height: 3rem;
+    font-size:xx-large;
+    margin-top: 10rem;
+    font-style: italic;
+     
+}

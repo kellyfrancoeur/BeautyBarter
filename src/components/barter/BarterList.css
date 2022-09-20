@@ -5,11 +5,16 @@
 
 .barter {
     background-color: rgb(207, 214, 212);
-    border: 1px solid rgb(0, 0, 0);
+    border: 5px solid rgb(0, 0, 0);
     padding: 0.7rem;
     margin: 0.5rem 0;
+    line-height: 2rem;
 }
 #header{
     font-size: large;
     font-style: italic;
+}
+.h2, h2{
+    text-align: center;
+    justify-content: center;
 }

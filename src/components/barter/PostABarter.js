@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./PostABarter.css"
 
 export const BarterForm = () => {
     const [services, setServices] = useState([])
@@ -52,9 +53,10 @@ export const BarterForm = () => {
     return (
         <form className="barterForm">
             <h2 className="barterForm__title">Post A Barter</h2>
+            <h3 id="barterForm_details">Select the service you'd like to receive and what you are willing to trade in return. Add a few details to let other users know exactly what you're looking for!</h3>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="description">Service Requested:  </label>
+                    <label htmlFor="description"><b>Service Requested:  </b></label>
                     <select id="serviceRequested" value={barter.serviceRequested}
                         onChange={(evt) => {
                             const copy = { ...barter }
@@ -73,7 +75,7 @@ export const BarterForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="description1">Details:</label>
+                    <label htmlFor="description1"><b>Details:</b></label>
                     <input
                         required autoFocus
                         type="text"
@@ -92,7 +94,7 @@ export const BarterForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="serviceOffered">Service Offered:  </label>
+                    <label htmlFor="serviceOffered"><b>Service Offered: </b> </label>
                     <select id="serviceOffered" value={barter.serviceOffered}
                         onChange={(evt) => {
                             const copy = { ...barter }
@@ -111,7 +113,7 @@ export const BarterForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="description2">Details:</label>
+                    <label htmlFor="description2"><b>Details:</b></label>
                     <input
                         required autoFocus
                         type="text"
