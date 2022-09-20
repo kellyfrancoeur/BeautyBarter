@@ -1,0 +1,35 @@
+.h1, h1{
+    font-size: 5.5rem;
+    text-align: center;
+}
+.images{
+    text-align: center;
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+}
+#image1 {
+    border: 2px solid rgb(0, 0, 0);
+}
+#image2 {
+    border: 2px solid rgb(0, 0, 0);
+}
+#image3 {
+    border: 2px solid rgb(0, 0, 0);
+}
+#image4 {
+    border: 2px solid rgb(0, 0, 0);
+}
+#image5 {
+    border: 2px solid rgb(0, 0, 0);
+}
+#image6 {
+    border: 2px solid rgb(0, 0, 0);
+}
+body { 
+    background: url(https://www.wallpaperboulevard.com/Images/product/fragment-offwhite-texture-wallpaper-nysc-l.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+  }

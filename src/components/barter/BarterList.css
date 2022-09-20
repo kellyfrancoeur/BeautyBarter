@@ -1,0 +1,15 @@
+.barters {
+    display: flex;
+    flex-direction: column;
+}
+
+.barter {
+    background-color: rgb(207, 214, 212);
+    border: 1px solid rgb(0, 0, 0);
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+}
+#header{
+    font-size: large;
+    font-style: italic;
+}

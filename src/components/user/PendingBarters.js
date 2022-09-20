@@ -55,13 +55,13 @@ export const PendingBarters = ({ barterObject, potentialBarters, setPotentialBar
     )
 
     return <section className="barter" key={`barter--${barterObject.id}`}>
-        <header>
-            <Link to={`/barters/${barterObject.id}/edit`}>Barter {barterObject.id}</Link>
+        <header id= "header">
+            <Link to={`/barters/${barterObject.id}/edit`}><b>Barter {barterObject.id}</b></Link>
         </header>
-        <div>Service Requested: {barterObject.serviceRequested}</div>
-        <div>Details: {barterObject.description1}</div>
-        <div>Service Offered: {barterObject.serviceOffered}</div>
-        <div>Details: {barterObject.description2}</div>
+        <div><b>Service Requested:</b> {barterObject.serviceRequested}</div>
+        <div><b>Details:</b> {barterObject.description1}</div>
+        <div><b>Service Offered:</b> {barterObject.serviceOffered}</div>
+        <div><b>Details:</b> {barterObject.description2}</div>
         <footer>
             {potentialBarters.map((potentialBarter) => {
                 if (potentialBarter.barterId === barterObject.id) {

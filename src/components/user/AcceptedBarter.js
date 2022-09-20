@@ -56,17 +56,17 @@ export const AcceptedBarters = ({ barterObject }) => {
     )
 
     return <section className="barter" key={`barter--${barterObject.id}` }>
-        <header>Barter {barterObject.id} </header>
-        <div>Service Requested: {barterObject.serviceRequested}</div>
-        <div>Details: {barterObject.description1}</div>
-        <div>Service Offered: {barterObject.serviceOffered}</div>
-        <div>Details: {barterObject.description2}</div>
+        <header id="header"><b>Barter {barterObject.id} </b></header>
+        <div><b>Service Requested:</b> {barterObject.serviceRequested}</div>
+        <div><b>Details:</b> {barterObject.description1}</div>
+        <div><b>Service Offered:</b> {barterObject.serviceOffered}</div>
+        <div><b>Details:</b> {barterObject.description2}</div>
         <footer>
                 {potentialBarters.map((potentialBarter) => {
                     if (potentialBarter.barterId === barterObject.id) {
                         
                         return (<>
-                            Accepted Barter: You will be trading services with {potentialBarter.user.firstName}!
+                            You've accepted the barter!
                         </>
                         )}
                     }

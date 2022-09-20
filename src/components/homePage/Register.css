@@ -15,9 +15,9 @@ fieldset {
     text-align: center;
 }
 
-.form--login > fieldset > input[type="email"] {
+/* .form--login > fieldset > input[type="email"] {
     width: 50em;
-}
+} */
 
 .label--login {
     width: 8rem;
@@ -42,7 +42,7 @@ fieldset {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.container--login {
+.form--login {
     text-align: center;
 }
 

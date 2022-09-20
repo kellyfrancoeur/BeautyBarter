@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import "./Login.css"
+import "./Register.css"
 
 export const Register = (props) => {
     const [user, setUser] = useState({
         firstName: "",
         lastName: "",
         email: "",
-        professionalId: 0,
+        professionId: 0,
         linksToSite: "",
         about: "",
         whatInterestedIn: "",
@@ -19,7 +19,7 @@ export const Register = (props) => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/professionType`)
+            fetch(`http://localhost:8088/professions`)
                 .then(response => response.json())
                 .then((professionArray) => {
                     setProfessions(professionArray)
@@ -66,7 +66,7 @@ export const Register = (props) => {
 
     const updateUser = (evt) => {
         const copy = { ...user }
-        if(evt.target.id === "professionalId"){
+        if(evt.target.id === "professionId"){
             copy[evt.target.id] = parseInt(evt.target.value)
         } else {
         copy[evt.target.id] = evt.target.value
@@ -75,7 +75,7 @@ export const Register = (props) => {
     }
 
     return (
-        <main style={{ textAlign: "center" }}>
+        <main style={{ textAlign: "center" }} className="container--login">
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for Beauty Barter</h1>
                 <fieldset>
@@ -99,7 +99,7 @@ export const Register = (props) => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="profession">Profession:  </label>
-                        <select id="professionalId" 
+                        <select id="professionId" 
                             onChange={updateUser}
                         >
                             <option value={0}>Select Profession</option>
