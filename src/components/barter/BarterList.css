@@ -9,6 +9,7 @@
     padding: 0.7rem;
     margin: 0.5rem 0;
     line-height: 2rem;
+    border-radius: 7px;
 }
 #header{
     font-size: large;
