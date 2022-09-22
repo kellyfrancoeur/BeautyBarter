@@ -35,7 +35,7 @@ export const Login = () => {
                     <h1>Beauty Barter</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
+                        <label htmlFor="inputEmail"> <b>Email address </b></label>
                         <input type="email"
                             value={email}
                             onChange={evt => set(evt.target.value)}
@@ -45,13 +45,13 @@ export const Login = () => {
                     </fieldset>
                     <fieldset>
                         <button type="submit">
-                            Sign in
+                            <b>Sign in</b>
                         </button>
                     </fieldset>
                 </form>
             </section>
             <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
+                <Link to="/register"><b>Not a member yet?</b></Link>
             </section>
         </main>
     )

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import "./PendingBarter.css"
 
 
 export const PendingBarters = ({ barterObject, potentialBarters, setPotentialBarters }) => {
@@ -58,15 +59,15 @@ export const PendingBarters = ({ barterObject, potentialBarters, setPotentialBar
         <header id= "header">
             <Link to={`/barters/${barterObject.id}/edit`}><b>Barter {barterObject.id}</b></Link>
         </header>
-        <div><b>Service Requested:</b> {barterObject.serviceRequested}</div>
-        <div><b>Details:</b> {barterObject.description1}</div>
-        <div><b>Service Offered:</b> {barterObject.serviceOffered}</div>
-        <div><b>Details:</b> {barterObject.description2}</div>
+        <div><b><u>Service Requested:</u> {barterObject.serviceRequested}</b></div>
+        <div><b><u>Details:</u> {barterObject.description1}</b></div>
+        <div><b><u>Service Offered:</u> {barterObject.serviceOffered}</b></div>
+        <div><b><u>Details:</u> {barterObject.description2}</b></div>
         <footer>
             {potentialBarters.map((potentialBarter) => {
                 if (potentialBarter.barterId === barterObject.id) {
                     return (<>
-                        Pending Barter: {potentialBarter.user.firstName} is interested in your trade.
+                        <b>Pending Barter: {potentialBarter.user.firstName} is interested in your trade.</b>
                         <div>
                             < button onClick={() => {
                                 fetch(`http://localhost:8088/potentialBarters/${potentialBarter.id}`, {
@@ -77,7 +78,7 @@ export const PendingBarters = ({ barterObject, potentialBarters, setPotentialBar
                                         userBarters(potentialBarters)
                                     }
                                     )
-                            }} className="barter_deny"> Deny </button>
+                            }} className="barter_deny"><b> Deny</b> </button>
                             <button onClick={() => {
                                 fetch(`http://localhost:8088/potentialBarters/${potentialBarter.id}`, {
                                     method: "PUT",
@@ -103,7 +104,7 @@ export const PendingBarters = ({ barterObject, potentialBarters, setPotentialBar
                                     })}
                             }
 
-                             className= "barter_accept" >Accept</button>
+                             className= "barter_accept" ><b>Accept</b></button>
                         </div></>
                     )
                 }

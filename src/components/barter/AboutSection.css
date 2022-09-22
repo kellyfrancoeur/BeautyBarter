@@ -1,10 +1,12 @@
 .h2, h2{
     font-size: 5rem;
     text-align: center;
+    font-family: "Raleway";
 }
 .h3, h3{
     font-size: 3.5rem;
     text-align: center;
+    font-family: "Raleway";
 }
 .form-control {
     text-align: center;
@@ -15,13 +17,14 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #495057;
+    color: #000000;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    font-family: "Raleway";
 }
 
 .container--about { 
@@ -35,6 +38,7 @@
 .container--about {
     text-align: center;
     font-weight: bold;
+    font-family: "Raleway";
 }
 
 .form--about {

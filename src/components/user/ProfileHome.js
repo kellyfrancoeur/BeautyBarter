@@ -50,7 +50,6 @@ export const ProfileHome = () => {
         []
     )
 
-//do I need an onChange?
     return <>
         <h2>Welcome Back {barterUserObject.firstName}!</h2>
         <h3> My Pending Barters</h3>
@@ -74,37 +73,11 @@ export const ProfileHome = () => {
                     return <AcceptedBarters
                     barterObject={barter}/>
                 }}   
-            )}          
+            )} 
+                     
         </article>
       
     </>
 }
 
-// return <>
-//         <h2> My Pending Barters</h2>
-//         <article className="barters" >
-//             {
-//                 filteredBarters.map((barter) => {
-//                     const acceptedFalse = potentialBarters.find (({barterId}) => barterId === barter.id)
-//                     if (barterUserObject.id === potentialBarters.userId && potentialBarters.accepted === false){
-//                         return  <PendingBarters
-//                             barterObject = {barter}
-//                             pendingBarter = {acceptedFalse}/>
-//                     })
-//             <h2> My Accepted Barters</h2>
-//                     <article className="barters" >
-//                         {
-//                             filteredBarters.map((barter) => {
-//                                 const acceptedTrue = potentialBarters.find (({barterId}) => barterId === barter.id)
-//                                 if (barterUserObject.id === potentialBarters.userId && potentialBarters.accepted === true){
-//                                     return  <AcceptedBarters
-//                                         barterObject = {barter}
-//                                         pendingBarter = {acceptedTrue}/>
-//                                 }}
-                                
-//                                 )}
-//                     </article>
-                
-//                     </>
-                
 

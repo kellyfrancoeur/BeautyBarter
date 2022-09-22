@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
+    font-family: "Raleway";
 }
 
 .navbar__item {
@@ -9,20 +10,20 @@
     list-style-type: none;
 }
 
-.navbar__logout {
+/* .navbar__logout {
     margin-left: auto;
-}
+} */
 .navbar__item {
-    margin: 1rem 0 2rem 2rem;
+    margin: -5rem 0 2rem 2rem;
     padding: 0.5rem;
-    background-color: rgb(98, 65, 247);
+    background-color: rgb(119, 90, 247);
     color: rgb(0, 0, 0);
     font-size: 1rem;
     border-radius: 7px;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
 }
 .navbar__item:hover {
-  margin: 1rem 0 2rem 2rem;
+  margin: -5rem 0 2rem 2rem;
   padding: 0.5rem;
   background-color: rgb(236, 106, 253);
   color: lightgoldenrodyellow;
@@ -31,11 +32,12 @@
   box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
 }
 .navbar__item:active {
-  margin: 1rem 0 2rem 2rem;
+  margin: -5rem 0 2rem 2rem;
   padding: 0.5rem;
-  background-color: rgb(108, 0, 250);
+  background-color: rgb(119, 90, 247);
   color: lightgoldenrodyellow;
   font-size: 1rem;
   border-radius: 7px;
   box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
 }
+

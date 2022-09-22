@@ -64,10 +64,10 @@ export const BarterForm = () => {
                             update(copy)
                         }}
                     >
-                        <option value={0}>Select Service</option>
+                        <option value={0}><b>Select Service</b></option>
                         {
                             services.map(service => {
-                                return <option value={service.service}>{service.service}</option>
+                                return <option value={service.service}><b>{service.service}</b></option>
                             })
                         }
                     </select>
@@ -102,7 +102,7 @@ export const BarterForm = () => {
                             update(copy)
                         }}
                     >
-                        <option value={0}>Select Service</option>
+                        <option value={0}><b>Select Service</b></option>
                         {
                             services.map(service => {
                                 return <option value={service.service}>{service.service}</option>
@@ -133,7 +133,7 @@ export const BarterForm = () => {
             <button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="btn btn-primary">
-                Submit Barter
+                <b>Submit Barter</b>
             </button>
         </form>
     )

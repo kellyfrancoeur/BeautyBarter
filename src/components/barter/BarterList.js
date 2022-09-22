@@ -6,7 +6,7 @@ import "./BarterList.css"
 export const BarterList = ({ searchTermState }) => {
     const [barters, setBarters] = useState([])
     const [filteredBarters, setFiltered] = useState([])
-   
+    const [potentialBarters, setPotentialBarters] = useState([])   
 
     useEffect(
         () => {
@@ -48,7 +48,7 @@ export const BarterList = ({ searchTermState }) => {
                         getAllBarters={getAllBarters} />
 
                 )
-            }
+            } 
         </article>
     </>
 

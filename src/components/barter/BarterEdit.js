@@ -54,7 +54,7 @@ export const BarterEdit = () => {
         <h2 className="barterForm__title">Post A Barter</h2>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="description">Service Requested:  </label>
+                <label htmlFor="description"><b>Service Requested: </b> </label>
                 <select id="serviceRequested" value={barter.serviceRequested}
                     onChange={(evt) => {
                         const copy = { ...barter }
@@ -73,7 +73,7 @@ export const BarterEdit = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="description1">Details:</label>
+                <label htmlFor="description1"><b>Details:</b></label>
                 <input
                     required autoFocus
                     type="text"
@@ -92,7 +92,7 @@ export const BarterEdit = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="serviceOffered">Service Offered:  </label>
+                <label htmlFor="serviceOffered"><b>Service Offered: </b> </label>
                 <select id="serviceOffered" value={barter.serviceOffered}
                     onChange={(evt) => {
                         const copy = { ...barter }
@@ -111,7 +111,7 @@ export const BarterEdit = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="description2">Details:</label>
+                <label htmlFor="description2"><b>Details:</b></label>
                 <input
                     required autoFocus
                     type="text"
@@ -131,7 +131,7 @@ export const BarterEdit = () => {
         <button
             onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
             className="btn btn-primary">
-            Save Changes
+            <b>Save Changes</b>
         </button>
     </form>
 }

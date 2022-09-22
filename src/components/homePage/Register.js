@@ -136,7 +136,7 @@ export const Register = (props) => {
                         placeholder="List Some Services You'd Trade" required />
                 </fieldset>
                 <fieldset>
-                    <button type="submit"> Register </button>
+                    <button type="submit"> <b>Register</b> </button>
                 </fieldset>
             </form>
         </main>

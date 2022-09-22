@@ -1,6 +1,7 @@
 .barters {
     display: flex;
     flex-direction: column;
+    font-family: "Raleway";
 }
 
 .barter {
@@ -10,12 +11,15 @@
     margin: 0.5rem 0;
     line-height: 2rem;
     border-radius: 7px;
+    font-family: "Raleway";
 }
 #header{
     font-size: large;
     font-style: italic;
+    font-family: "Raleway";
 }
 .h2, h2{
     text-align: center;
     justify-content: center;
+    font-family: "Raleway";
 }

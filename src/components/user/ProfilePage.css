@@ -3,16 +3,77 @@
     overflow-wrap: break-word;
     line-height: 3rem;
     font-size: large;
-    margin-top: 0rem;
-    border: 2px solid rgb(0, 0, 0);
-    padding: 2rem;
+    border: 5px solid rgb(0, 0, 0);
+    padding: 1rem;
+    font-family: "Raleway";
+}
+#userPics{
+    border: 5px solid rgb(0, 0, 0);
+    padding: 1rem;
+    justify-content: center;
 }
 #user_header{
     inline-size: 450px;
     overflow-wrap: break-word;
     line-height: 3rem;
     font-size:xx-large;
-    margin-top: 10rem;
+    margin-top: 3rem;
     font-style: italic;
+    text-align: center;
+    font-family: "Raleway";
      
 }
+.userDeets{
+    margin-right: 150px;
+    font-family: "Raleway";
+    
+}
+.portfolioText{
+    inline-size: 450px;
+    overflow-wrap: break-word;
+    font-family: "Raleway";
+}
+#user_portfolio{
+    inline-size: 450px;
+    overflow-wrap: break-word;
+    line-height: 3rem;
+    font-size:xx-large;
+    margin-top: 3rem;
+    font-style: italic;
+    text-align: right;
+    font-family: "Raleway";
+}
+.flex-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#portfolioPictures{
+    border: 2px solid rgb(0, 0, 0);
+    
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: space-around;
+  }
+  
+
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+    justify-content: space-around;
+  }
+  
+  .column img {
+    margin-top: 18px;
+    vertical-align: middle;
+    width: 109%;
+  }
+  .logo{
+    text-align: center;
+    margin-top: -4rem;
+  }
