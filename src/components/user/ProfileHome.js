@@ -14,7 +14,7 @@ export const ProfileHome = () => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/barters`)
+            fetch(`http://localhost:8088/barters?_expand=user`)
                 .then(response => response.json())
                 .then((barterArray) => {
                     setBarters(barterArray)
@@ -52,7 +52,7 @@ export const ProfileHome = () => {
 
     return <>
         <h2>Welcome Back {barterUserObject.firstName}!</h2>
-        <h3> My Pending Barters</h3>
+        <h3><u>My Pending Barters</u></h3>
         <article className="barters">
             {
                 filteredBarters.map((barter) => {
@@ -66,7 +66,7 @@ export const ProfileHome = () => {
                     } 
                 }  
                 )} 
-                 <h3> My Accepted Barters</h3>
+                 <h3> <u>My Accepted Barters</u></h3>
                  {filteredBarters.map((barter) => {
                     const whichList = potentialBarters.find ((potentialBarter) => potentialBarter.barterId === barter.id && potentialBarter.accepted === true)
                     if (whichList){

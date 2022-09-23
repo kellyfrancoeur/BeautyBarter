@@ -3,6 +3,7 @@ import { AboutSection } from "../barter/AboutSection"
 import { BarterContainer } from "../barter/BarterContainer"
 import { BarterEdit } from "../barter/BarterEdit"
 import { BarterList } from "../barter/BarterList"
+import { CurrentUsers } from "../barter/CurrentUsers"
 import { BarterForm } from "../barter/PostABarter"
 import { HomePage } from "../homePage/HomePage"
 import { ProfileHome } from "../user/ProfileHome"
@@ -26,6 +27,7 @@ export const ApplicationViews = () => {
                 <Route path="about" element={ <AboutSection /> } />
                 <Route path="userProfile/:id" element={ <ProfilePage /> } />
                 <Route path="home" element={ <HomePage /> } />
+                <Route path="users" element={ <CurrentUsers /> } />
             
             </Route>
            

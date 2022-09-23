@@ -9,7 +9,7 @@ export const IndividualBarter = ({ barterObject, getAllBarters }) => {
 
 
     return <section className="barter" key={`barter--${barterObject.id}`}>
-        <header id="header"><b>Barter {barterObject.id}</b></header>
+        <header id="header"><b>Barter Request</b></header>
         <div><b><u>Service Requested:</u> {barterObject.serviceRequested}</b></div>
         <div><b><u>Details:</u> {barterObject.description1}</b></div>
         <div><b><u>Service Offered:</u> {barterObject.serviceOffered}</b></div>

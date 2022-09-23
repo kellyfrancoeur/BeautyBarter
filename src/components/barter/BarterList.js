@@ -6,7 +6,7 @@ import "./BarterList.css"
 export const BarterList = ({ searchTermState }) => {
     const [barters, setBarters] = useState([])
     const [filteredBarters, setFiltered] = useState([])
-    const [potentialBarters, setPotentialBarters] = useState([])   
+     
 
     useEffect(
         () => {
@@ -39,7 +39,7 @@ export const BarterList = ({ searchTermState }) => {
     )
 
     return <>
-        <h2> Available Barters</h2>
+        <h2> <u>Available Barters</u></h2>
         <article className="barters" >
             {
                 filteredBarters.map(

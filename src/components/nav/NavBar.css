@@ -8,11 +8,13 @@
 .navbar__item {
     flex-basis: 20%;
     list-style-type: none;
+    border: 2px solid black;
+
 }
 
-/* .navbar__logout {
+ .navbar__logout {
     margin-left: auto;
-} */
+} 
 .navbar__item {
     margin: -5rem 0 2rem 2rem;
     padding: 0.5rem;

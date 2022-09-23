@@ -1,0 +1,13 @@
+.users_List {
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem;
+    grid-gap: 8rem;
+    align-content: center;
+    justify-content: center;
+
+}
+
+#userName {
+    font-weight: bold;
+    font-size: larger;
+}

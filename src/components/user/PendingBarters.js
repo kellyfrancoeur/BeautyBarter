@@ -67,7 +67,7 @@ export const PendingBarters = ({ barterObject, potentialBarters, setPotentialBar
             {potentialBarters.map((potentialBarter) => {
                 if (potentialBarter.barterId === barterObject.id) {
                     return (<>
-                        <b>Pending Barter: {potentialBarter.user.firstName} is interested in your trade.</b>
+                        <b>Pending Barter: <Link id="userName" to={`/userProfile/${potentialBarter.user.id}`}>{potentialBarter.user.firstName}</Link> is interested in your trade.</b>
                         <div>
                             < button onClick={() => {
                                 fetch(`http://localhost:8088/potentialBarters/${potentialBarter.id}`, {

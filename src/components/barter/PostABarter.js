@@ -52,7 +52,7 @@ export const BarterForm = () => {
     }
     return (
         <form className="barterForm">
-            <h2 className="barterForm__title">Post A Barter</h2>
+            <h2 className="barterForm__title"><u>Post A Barter</u></h2>
             <h3 id="barterForm_details">Select the service you'd like to receive and what you are willing to trade in return. Add a few details to let other users know exactly what you're looking for!</h3>
             <fieldset>
                 <div className="form-group">

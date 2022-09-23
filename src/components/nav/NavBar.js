@@ -11,13 +11,16 @@ export const NavBar = () => {
             </li> 
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/about"><b>About</b></Link>
-            </li> 
+            </li>
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/viewBarter"><b>View Barters</b></Link>
             </li>
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/postBarter"><b>Post A Barter</b></Link>
             </li>
+            <li className="navbar__item active">
+                <Link className="navbar__link" to="/users"><b>Members</b></Link>
+            </li> 
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/profile"><b>Profile</b></Link>
             </li>
@@ -32,5 +35,4 @@ export const NavBar = () => {
                     : ""
             }
         </ul>
-    )
-}
+)}

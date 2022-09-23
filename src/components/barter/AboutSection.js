@@ -6,7 +6,7 @@ export const AboutSection = () => {
             <section>
                 <form className="form--about">
                 <h2>Welcome To Beauty Barter</h2>
-                <h3>What We're About</h3>
+                <h3><u>What We're About</u></h3>
             
                 <section className = "aboutSection"><div>
                     Any one who has worked in the beauty industry has likely, at one point or another, traded services with a fellow provider. We keep each other looking and feeling our best while both supporting and promoting each other. But unless your salon was a full stop shop (which we are seeing less and less these days), you may have found yourself wishing you could trade other services as well but didn't know where to start or who to even ask. It's an awkward conversation to have with someone that you haven't already been working with.
@@ -22,7 +22,7 @@ export const AboutSection = () => {
                 </div></section>
               
 
-                <h2>Rules of Beauty Barter</h2>
+                <h3><u>Rules of Beauty Barter</u></h3>
                 <section className = "aboutSection">
                 <div>
                     <li>
