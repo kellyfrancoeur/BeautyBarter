@@ -1,4 +1,10 @@
 #barterForm_details{
     font-size: large;
     font-family: "Raleway";
+    margin: 0rem 5rem;
+}
+.wholeBarterForm{
+    margin: 0rem 5rem;
+    border: 2px solid black;
+    padding: 1rem;
 }

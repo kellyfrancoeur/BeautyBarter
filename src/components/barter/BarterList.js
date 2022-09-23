@@ -39,7 +39,7 @@ export const BarterList = ({ searchTermState }) => {
     )
 
     return <>
-        <h2> <u>Available Barters</u></h2>
+        <h2 id="available"> <u>Available Barters</u></h2>
         <article className="barters" >
             {
                 filteredBarters.map(

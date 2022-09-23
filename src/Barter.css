@@ -43,14 +43,14 @@ button {
 }
 button:hover {
 background-color: rgb(236, 106, 253);
-color: lightgoldenrodyellow;
+color: rgb(255, 255, 255);
 font-size: 1rem;
 border-radius: 7px;
 box-shadow: 0.50rem 0.25rem 0.5rem rgb(143, 143, 143);
 }
 button:active {
 background-color: rgb(119, 90, 247);
-color: lightgoldenrodyellow;
+color: rgb(255, 255, 255);
 font-size: 1rem;
 border-radius: 7px;
 box-shadow: 0.50rem 0.25rem 0.5rem rgb(143, 143, 143);

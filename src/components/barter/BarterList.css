@@ -12,6 +12,7 @@
     line-height: 2rem;
     border-radius: 7px;
     font-family: "Raleway";
+    margin: 0rem 10rem; 
 }
 #header{
     font-size: large;
@@ -22,4 +23,8 @@
     text-align: center;
     justify-content: center;
     font-family: "Raleway";
+}
+#available{
+    text-align: center;
+    margin: 6rem 10rem;
 }
