@@ -52,6 +52,8 @@ export const BarterEdit = () => {
 
     return <form className="barterForm">
         <h2 className="barterForm__title">Post A Barter</h2>
+        <h3 id="barterForm_details">Select the service you'd like to receive and what you are willing to trade in return. Add a few details to let other users know exactly what you're looking for!</h3>
+        <div className="wholeBarterForm">
         <fieldset>
             <div className="form-group">
                 <label htmlFor="description"><b>Service Requested: </b> </label>
@@ -133,5 +135,6 @@ export const BarterEdit = () => {
             className="btn btn-primary">
             <b>Save Changes</b>
         </button>
+        </div>
     </form>
 }
