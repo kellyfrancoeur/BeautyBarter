@@ -3,8 +3,19 @@ import { Link } from "react-router-dom"
 import "./CurrentUser.css"
 
 
-export const CurrentUsers = () => {
+export const CurrentUsers = ({ searchUserTermState }) => {
     const [users, setUsers] = useState([])
+    const [filteredUsers, setFilteredUsers] = useState([])
+
+    
+    useEffect(
+        () => {
+            const searchedUsers = users.filter(user => {
+                return user?.profession?.profession.toLowerCase().startsWith(searchUserTermState.toLowerCase()) })
+            setFilteredUsers(searchedUsers)
+        },
+        [searchUserTermState]
+    )
     
     useEffect(
         () => {
@@ -12,6 +23,7 @@ export const CurrentUsers = () => {
                 .then(res => res.json())
                 .then((usersArray) => {
                     setUsers(usersArray)
+                    setFilteredUsers(usersArray)
                 })
         },
         []
@@ -21,10 +33,10 @@ export const CurrentUsers = () => {
 
     return <> 
     <main className = "container--about">
-    <h2><u>Members</u></h2>
+    <h2 id="members"><u>Members</u></h2>
     <article className="users_List" >
         {
-            users.map(
+            filteredUsers.map(
                 (user) => {
                     return <section className="userList" key={`user--${user.id}`}>
                        <div> <Link id="userName" to={`/userProfile/${user.id}`}>{user.firstName} {user.lastName}</Link></div>

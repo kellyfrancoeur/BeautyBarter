@@ -3,7 +3,7 @@ import "./BarterSearch.css"
 export const BarterSearch = ({ setterFunction }) => {
     return (
         <div id="wrap">
-            <form action="" autocomplete="on">
+            <form action="" autocomplete="off">
                 <input id="search" name="search"
                     onChange={
                         (changeEvent) => {
@@ -15,13 +15,3 @@ export const BarterSearch = ({ setterFunction }) => {
                 </div>
                 )
 }
-
-                {/* <div id="searchBar">
-        <input
-            onChange={
-                (changeEvent) => {
-                    setterFunction(changeEvent.target.value)
-                }
-            }
-            type="text" placeholder="Enter search terms" />
-            </div> */}
