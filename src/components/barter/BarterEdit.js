@@ -14,7 +14,7 @@ export const BarterEdit = () => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/services`)
+            fetch(`http://localhost:3000/services`)
                 .then(response => response.json())
                 .then((serviceArray) => {
                     setServices(serviceArray)
@@ -25,7 +25,7 @@ export const BarterEdit = () => {
     )
 
     useEffect(() => {
-        fetch(`http://localhost:8088/barters/${barterId}`)
+        fetch(`http://localhost:3000/barters/${barterId}`)
             .then(response => response.json())
             .then((data) => {
                 assignBarter(data)
@@ -36,7 +36,7 @@ export const BarterEdit = () => {
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
-        return fetch(`http://localhost:8088/barters/${barter.id}`, {
+        return fetch(`http://localhost:3000/barters/${barter.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

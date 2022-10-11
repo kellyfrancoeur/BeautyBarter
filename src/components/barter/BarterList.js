@@ -21,7 +21,7 @@ export const BarterList = ({ searchTermState }) => {
 
 
     const getAllBarters = () => {
-        fetch(`http://localhost:8088/barters?_embed=potentialBarters&_expand=user`)
+        fetch(`http://localhost:3000/barters?_embed=potentialBarters&_expand=user`)
             .then(response => response.json())
             .then((barterArray) => {
                 setFiltered(barterArray)

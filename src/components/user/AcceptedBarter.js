@@ -12,7 +12,7 @@ export const AcceptedBarters = ({ barterObject }) => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/barters`)
+            fetch(`http://localhost:3000/barters`)
                 .then(response => response.json())
                 .then((barterArray) => {
                     setBarters(barterArray)
@@ -22,7 +22,7 @@ export const AcceptedBarters = ({ barterObject }) => {
     )
 
     const userBarters = () => {
-        fetch(`http://localhost:8088/potentialBarters?_expand=user`)
+        fetch(`http://localhost:3000/potentialBarters?_expand=user`)
                 .then(response => response.json())
                 .then((potentialBarterArray) => {
                     setPotentialBarters(potentialBarterArray)
@@ -31,7 +31,7 @@ export const AcceptedBarters = ({ barterObject }) => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/potentialBarters?_expand=user`)
+            fetch(`http://localhost:3000/potentialBarters?_expand=user`)
                 .then(response => response.json())
                 .then((potentialBarterArray) => {
                     setPotentialBarters(potentialBarterArray)

@@ -19,7 +19,7 @@ export const Register = (props) => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/professions`)
+            fetch(`http://localhost:3000/professions`)
                 .then(response => response.json())
                 .then((professionArray) => {
                     setProfessions(professionArray)
@@ -29,7 +29,7 @@ export const Register = (props) => {
         []
     )
     const registerNewUser = () => {
-        return fetch("http://localhost:8088/users", {
+        return fetch("http://localhost:3000/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -50,7 +50,7 @@ export const Register = (props) => {
 
     const handleRegister = (e) => {
         e.preventDefault()
-        return fetch(`http://localhost:8088/users?email=${user.email}`)
+        return fetch(`http://localhost:3000/users?email=${user.email}`)
             .then(res => res.json())
             .then(response => {
                 if (response.length > 0) {
@@ -76,7 +76,7 @@ export const Register = (props) => {
 
     return (
         <main style={{ textAlign: "center" }} className="container--login">
-            <form className="form--login" onSubmit={handleRegister}>
+            <form className="form--login" onSubmit={handleRegister} autocomplete="off">
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for Beauty Barter</h1>
                 <fieldset>
                     <label htmlFor="firstName"> First Name </label>

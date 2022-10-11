@@ -14,7 +14,7 @@ export const ProfileHome = () => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/barters?_expand=user`)
+            fetch(`http://localhost:3000/barters?_expand=user`)
                 .then(response => response.json())
                 .then((barterArray) => {
                     setBarters(barterArray)
@@ -41,7 +41,7 @@ export const ProfileHome = () => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/potentialBarters?_expand=user`)
+            fetch(`http://localhost:3000/potentialBarters?_expand=user`)
                 .then(response => response.json())
                 .then((potentialBartersArray) => {
                     setPotentialBarters(potentialBartersArray)

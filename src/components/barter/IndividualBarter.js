@@ -22,7 +22,7 @@ export const IndividualBarter = ({ barterObject, getAllBarters }) => {
                 barterObject.potentialBarters.length
                     ? <b>"This Barter is Pending..."</b>
                     : <button onClick={() => {
-                        fetch(`http://localhost:8088/potentialBarters`, {
+                        fetch(`http://localhost:3000/potentialBarters`, {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json"

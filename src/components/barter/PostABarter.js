@@ -14,7 +14,7 @@ export const BarterForm = () => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/services`)
+            fetch(`http://localhost:3000/services`)
                 .then(response => response.json())
                 .then((serviceArray) => {
                     setServices(serviceArray)
@@ -37,7 +37,7 @@ export const BarterForm = () => {
             serviceOffered: barter.serviceOffered,
             description2: barter.description2
         }
-        return fetch(`http://localhost:8088/barters`, {
+        return fetch(`http://localhost:3000/barters`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json"

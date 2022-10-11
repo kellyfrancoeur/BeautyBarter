@@ -19,7 +19,7 @@ export const CurrentUsers = ({ searchUserTermState }) => {
     
     useEffect(
         () => {
-            fetch(`http://localhost:8088/users?_expand=profession`)
+            fetch(`http://localhost:3000/users?_expand=profession`)
                 .then(res => res.json())
                 .then((usersArray) => {
                     setUsers(usersArray)

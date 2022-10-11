@@ -12,7 +12,7 @@ export const PendingBarters = ({ barterObject, potentialBarters, setPotentialBar
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/barters`)
+            fetch(`http://localhost:3000/barters`)
                 .then(response => response.json())
                 .then((barterArray) => {
                     setBarters(barterArray)
@@ -22,7 +22,7 @@ export const PendingBarters = ({ barterObject, potentialBarters, setPotentialBar
     )
 
     const userBarters = () => {
-        fetch(`http://localhost:8088/potentialBarters?_expand=user`)
+        fetch(`http://localhost:3000/potentialBarters?_expand=user`)
             .then(response => response.json())
             .then((potentialBarterArray) => {
                 setPotentialBarters(potentialBarterArray)
@@ -31,7 +31,7 @@ export const PendingBarters = ({ barterObject, potentialBarters, setPotentialBar
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/potentialBarters?_expand=user`)
+            fetch(`http://localhost:3000/potentialBarters?_expand=user`)
                 .then(response => response.json())
                 .then((potentialBarterArray) => {
                     setPotentialBarters(potentialBarterArray)
@@ -70,7 +70,7 @@ export const PendingBarters = ({ barterObject, potentialBarters, setPotentialBar
                         <b>Pending Barter: <Link id="userName" to={`/userProfile/${potentialBarter.user.id}`}>{potentialBarter.user.firstName}</Link> is interested in your trade.</b>
                         <div>
                             < button onClick={() => {
-                                fetch(`http://localhost:8088/potentialBarters/${potentialBarter.id}`, {
+                                fetch(`http://localhost:3000/potentialBarters/${potentialBarter.id}`, {
                                     method: "DELETE"
                                 })
                                     .then(response => response.json())
@@ -80,7 +80,7 @@ export const PendingBarters = ({ barterObject, potentialBarters, setPotentialBar
                                     )
                             }} className="barter_deny"><b> Deny</b> </button>
                             <button onClick={() => {
-                                fetch(`http://localhost:8088/potentialBarters/${potentialBarter.id}`, {
+                                fetch(`http://localhost:3000/potentialBarters/${potentialBarter.id}`, {
                                     method: "PUT",
                                     headers: {
                                         "Content-Type": "application/json"
@@ -95,7 +95,7 @@ export const PendingBarters = ({ barterObject, potentialBarters, setPotentialBar
                                     .then(response => response.json())
                                     .then(() => {
                                     
-                                        fetch(`http://localhost:8088/potentialBarters/${potentialBarter.id}`)
+                                        fetch(`http://localhost:3000/potentialBarters/${potentialBarter.id}`)
                                             .then(response => response.json())
                                             .then(() => {
                                                 userBarters(potentialBarters)
