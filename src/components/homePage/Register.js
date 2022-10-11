@@ -43,7 +43,7 @@ export const Register = (props) => {
                         id: createdUser.id
                     }))
 
-                    navigate("/")
+                    navigate("/home")
                 }
             })
     }
@@ -93,7 +93,7 @@ export const Register = (props) => {
                 <fieldset>
                     <label htmlFor="email"> Email address </label>
                     <input onChange={updateUser}
-                        type="email" id="email" className="form-control"
+                        type="text" id="email" className="form-control"
                         placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
